@@ -9857,7 +9857,7 @@ window.UL_FLY=(x,y,html)=>{if(title().hidden)return;
   const dx=tx-x,dy=ty-y;let tr=0;
   const tick=setInterval(()=>{const b=f.getBoundingClientRect();if(!b.width)return;burst(b.left+b.width/2,b.top+b.height/2,1);if(++tr>14)clearInterval(tick)},45);
   const end=()=>{clearInterval(tick);f.remove();if(!$('ulHint'))return;h.style.visibility='';ULOPEN=true;burst(tx,ty,12);T(2637,0,.4,'triangle',.06)};
-  let a=null;try{a=f.animate([{transform:'translate(0,0) scale(1) rotate(0)'},{transform:`translate(${dx*.35}px,${dy*.65-40}px) scale(1.4) rotate(-200deg)`,offset:.45},{transform:`translate(${dx}px,${dy}px) scale(.9) rotate(-540deg)`}],{duration:850,easing:'cubic-bezier(.35,0,.25,1)'})}catch(e){}
+  let a=null;try{a=f.animate([{transform:'translate(0,0) scale(1) rotate(0)'},{transform:`translate(${dx*.35}px,${dy*.65-40}px) scale(1.4) rotate(-320deg)`,offset:.45},{transform:`translate(${dx}px,${dy}px) scale(.9) rotate(-720deg)`}],{duration:850,easing:'cubic-bezier(.35,0,.25,1)'})}catch(e){}
   if(a)a.onfinish=end;else end()};
 // 表メニューで右斜め下へスワイプ（左上の画面を引っぱってくる向き）
 {let sw=null;
